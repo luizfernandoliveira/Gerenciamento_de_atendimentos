@@ -1,2 +1,2 @@
-# Gerenciamento_de_atendiemntos
+# Gerenciamento_de_atendimentos
 Software para gerenciamento de manutenção e atendimentos.
