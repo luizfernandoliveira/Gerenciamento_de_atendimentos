@@ -2,7 +2,7 @@ from django.db import models
 from datetime import date
 
 
-class Concessionarias(models.Model):
+class Empresas(models.Model):
     nome = models.CharField(max_length=100, )
     contrato_suporte = models.BooleanField(default=False)
     tipo_contrato = models.CharField(max_length=30, blank=True)
@@ -12,7 +12,7 @@ class Concessionarias(models.Model):
     telefone_responsavel = models.CharField(max_length=20, blank=True)
 
     class Meta:
-        verbose_name = 'Concessionaria'
+        verbose_name = 'Empresa'
 
     def __str__(self):
         return self.nome

@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'header.html' %}
 
 
 {% block 'titulo' %}Login{% endblock %}
@@ -26,7 +26,7 @@
         </div>
 
         <div class="col-md">
-            <h1>Login</h1>
+            <h1>Entrar</h1>
             <hr>
 
             <form method="POST" action="{% url 'valida_login' %}">{% csrf_token %}
@@ -36,8 +36,8 @@
                 <label>Senha</label>
                 <input name="senha" class="form-control" type="password" placeholder="Senha...">
                 <br>
-                <input class="btn btn-info btn-lg" type="submit" value="Entrar">
-                <a href="{% url 'cadastro' %}" class="btn btn-primary btn-lg">Cadastro</a>
+                <input class="btn btn-success btn-lg" type="submit" value="Entrar">
+                <a href="{% url 'cadastro' %}" class="btn btn-info btn-lg">Cadastro</a>
 
             </form>
         </div>
@@ -55,3 +55,5 @@
 
 
 {% endblock %}
+
+{% include "footer.html" %}
