@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
 from .models import Usuario
 from hashlib import sha256
 
@@ -39,7 +38,7 @@ def valida_cadastro(request):
 
         return redirect('/auth/cadastro/?status=0')
 
-    except:
+    except(Exception):
         return redirect('/auth/cadastro/?status=4')
 
 
@@ -55,7 +54,7 @@ def valida_login(request):
         return redirect('/auth/login/?status=1')
     elif len(usuario) > 0:
         request.session['usuario'] = usuario[0].id
-        return redirect(f"/empresa/home/")
+        return redirect("/empresa/home/")
 
 
 def sair(request):
