@@ -1,0 +1,1 @@
+web: gunicorn gerenciamento_de_atendimentos.wsgi.py --log-file-
