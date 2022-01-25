@@ -1,6 +1,6 @@
 {% extends 'header.html' %}
 
-{% block 'titulo' %} Cadastro {% endblock %}
+{% block 'titulo' %} Cadastro de Empresa {% endblock %}
 
 {% block 'conteudo' %}
 
@@ -14,7 +14,7 @@
 
     {% if status == '1' %}
         <div class="alert alert-danger" role="alert">
-            Nome ou email não podem estar vazios.
+            Necessário que todos os campos sejam preenchidos
         </div>
     {% endif%}
 
@@ -43,7 +43,7 @@
         </div>
 
         <div class="col-md">
-            <h1>Cadastre-se</h1>
+            <h1>Cadastro de Empresa</h1>
             <hr>
 
             <form method="POST" action="{% url 'valida_cadastro' %}">{% csrf_token %}
@@ -51,15 +51,25 @@
                 <label>Nome</label>
                 <input name="nome" class="form-control" type="text" placeholder="Nome...">
                 <br>
-                <label>Email</label>
-                <input name="email" class="form-control" type="text" placeholder="Email...">
-                <br>
-                <label>Senha</label>
-                <input name="senha" class="form-control" type="password" placeholder="Senha...">
-                <br>
-                <input class="btn btn-success btn-lg" type="submit" value="Cadastrar">
-                <a href="{% url 'login' %}" class="btn btn-info btn-lg">Entrar</a>
 
+                <label>Tipo de Contrato</label>
+                <input name="tipo_de_contrato" class="form-control" type="text" placeholder="Tipo de contrato...">
+                <br>
+                <label>Data de Cadastro</label>
+                <input name="data_de_cadastro" class="form-control" type="datetime-local">
+                <br>
+                <label>Data Final do Contrato</label>
+                <input name="data_final_contrato" class="form-control" type="datetime-local">
+                <br>
+                <label>Responsável da Manutenção</label>
+                <input name="tipo_de_contrato" class="form-control" type="text" placeholder="Responsável da Manutenção...">
+                <br>
+                <label>Telefone Responsável</label>
+                <input name="tipo_de_contrato" class="form-control" type="number" placeholder="Telefone Responsável...">
+                <br>
+                <p><input type="checkbox" name="contrato_suporte_ativo"/></label> Contrato Suporte Ativo</label></p>
+                <input class="btn btn-success btn-lg" type="submit" value="Cadastrar">
+                <a href="{% url 'login' %}" class="btn btn-secondary btn-lg">Cancelar</a>
             </form>
         </div>
 
