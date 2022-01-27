@@ -14,7 +14,7 @@
 
     {% if status == '1' %}
         <div class="alert alert-danger" role="alert">
-            Necessário que todos os campos sejam preenchidos
+            Necessário que todos os campos sejam preenchidos!
         </div>
     {% endif%}
 
@@ -46,7 +46,7 @@
             <h1>Cadastro de Empresa</h1>
             <hr>
 
-            <form method="POST" action="{% url 'valida_cadastro' %}">{% csrf_token %}
+            <form method="POST" action="{% url 'valida_cadastro_empresa' %}">{% csrf_token %}
 
                 <label>Nome</label>
                 <input name="nome" class="form-control" type="text" placeholder="Nome...">
@@ -56,6 +56,10 @@
                 <input name="tipo_de_contrato" class="form-control" type="text" placeholder="Tipo de contrato...">
                 <br>
                 <label>Data de Cadastro</label>
+
+
+                <!--verificar como utilizar o python ou html para colocar data fixa abaixo-->
+
                 <input name="data_de_cadastro" class="form-control" type="datetime-local">
                 <br>
                 <label>Data Final do Contrato</label>
