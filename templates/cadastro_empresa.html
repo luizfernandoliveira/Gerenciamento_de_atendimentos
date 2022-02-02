@@ -18,24 +18,6 @@
         </div>
     {% endif%}
 
-    {% if status == '2' %}
-        <div class="alert alert-danger" role="alert">
-            Sua senha deve ter pelo menos 8 caracteres.
-        </div>
-    {% endif%}
-
-    {% if status == '3' %}
-        <div class="alert alert-danger" role="alert">
-            Usuário já existe no sistema.
-        </div>
-    {% endif%}
-
-    {% if status == '4' %}
-        <div class="alert alert-danger" role="alert">
-            Erro interno do sistema.
-        </div>
-    {% endif%}
-
 
     <div class="row">
         <div class="col-md-3">
@@ -53,23 +35,23 @@
                 <br>
 
                 <label>Tipo de Contrato</label>
-                <input name="tipo_de_contrato" class="form-control" type="text" placeholder="Tipo de contrato...">
+                <input name="tipo_contrato" class="form-control" type="text" placeholder="Tipo de contrato...">
                 <br>
                 <label>Data de Cadastro</label>
 
 
                 <!--verificar como utilizar o python ou html para colocar data fixa abaixo-->
 
-                <input name="data_de_cadastro" class="form-control" type="datetime-local">
+                <input name="data_de_cadastro" class="form-control" type="date">
                 <br>
                 <label>Data Final do Contrato</label>
-                <input name="data_final_contrato" class="form-control" type="datetime-local">
+                <input name="data_final_contrato" class="form-control" type="date">
                 <br>
                 <label>Responsável da Manutenção</label>
-                <input name="tipo_de_contrato" class="form-control" type="text" placeholder="Responsável da Manutenção...">
+                <input name="responsavel_manutencao" class="form-control" type="text" placeholder="Responsável da Manutenção...">
                 <br>
                 <label>Telefone Responsável</label>
-                <input name="tipo_de_contrato" class="form-control" type="number" placeholder="Telefone Responsável...">
+                <input name="telefone_responsavel" class="form-control" type="text" placeholder="Telefone Responsável...">
                 <br>
                 <p><input type="checkbox" name="contrato_suporte_ativo"/></label> Contrato Suporte Ativo</label></p>
                 <input class="btn btn-success btn-lg" type="submit" value="Cadastrar">
