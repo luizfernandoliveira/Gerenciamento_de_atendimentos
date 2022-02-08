@@ -18,6 +18,12 @@
         </div>
     {% endif%}
 
+    {% if status == '2' %}
+        <div class="alert alert-danger" role="alert">
+            O nome é um campo obrigatório.
+        </div>
+    {% endif%}
+
 
     <div class="row">
         <div class="col-md-3">
@@ -53,7 +59,6 @@
                 <label>Telefone Responsável</label>
                 <input name="telefone_responsavel" class="form-control" type="text" placeholder="Telefone Responsável...">
                 <br>
-                <p><input type="checkbox" name="contrato_suporte_ativo"/></label> Contrato Suporte Ativo</label></p>
                 <input class="btn btn-success btn-lg" type="submit" value="Cadastrar">
                 <a href="{% url 'login' %}" class="btn btn-secondary btn-lg">Cancelar</a>
             </form>
