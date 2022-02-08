@@ -28,12 +28,11 @@
                 </div>
               </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
+            <form class="form-inline my-2 my-lg-0" method="POST" action="{% url 'login' %}"> {% csrf_token %}>
               <button class="btn btn-primary my-2 my-sm-0" type="submit">Entrar</button>
             </form>
           </div>
     </nav>
-
 
 
 

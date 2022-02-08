@@ -16,11 +16,8 @@ def valida_cadastro_empresa(request):
     responsavel_manutencao = request.POST.get('responsavel_manutencao')
     telefone_responsavel = request.POST.get('telefone_responsavel')
 
-
-    empresa = Empresas.objects.filter(nome=nome)
-
     if len(nome.strip()) == 0:
-        return redirect('/empresa/cadastro/?status=2')
+        return redirect('/empresa/cadastro_empresa/?status=2')
 
     try:
         if data_de_cadastro == '':
@@ -42,9 +39,9 @@ def valida_cadastro_empresa(request):
                                )
         empresa.save()
 
-        return redirect('/empresa/cadastro/?status=0')
+        return redirect('/empresa/cadastro_empresa/?status=0')
     except Exception:
-        return redirect('/empresa/cadastro/?status=1')
+        return redirect('/empresa/cadastro_empresa/?status=1')
 
 
 def lista_empresa():
