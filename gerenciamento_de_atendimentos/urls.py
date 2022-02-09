@@ -26,4 +26,6 @@ urlpatterns = [
     path('', RedirectView.as_view(url='/home/')),
     path('empresa/', include('empresa.urls')),
     path('empresa/', RedirectView.as_view(url='/empresa/cadastro_empresa/')),
+    path('equipamento/', include('equipamento.urls')),
+    path('equipamento/', RedirectView.as_view(url='/equipamento/cadastro_equipamento/')),
 ]

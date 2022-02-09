@@ -1,0 +1,85 @@
+{% extends 'header.html' %}
+
+{% block 'titulo' %} Cadastro de Equipamento {% endblock %}
+
+{% block 'conteudo' %}
+
+<div class="container">
+    <br>
+    {% if status == '0' %}
+        <div class="alert alert-success" role="alert">
+            Cadastro realizado com sucesso.
+        </div>
+    {% endif%}
+
+    {% if status == '1' %}
+        <div class="alert alert-danger" role="alert">
+            Necessário que todos os campos sejam preenchidos!
+        </div>
+    {% endif%}
+
+    {% if status == '2' %}
+        <div class="alert alert-danger" role="alert">
+            O nome é um campo obrigatório.
+        </div>
+    {% endif%}
+
+
+    <div class="row">
+        <div class="col-md-3">
+
+        </div>
+
+        <div class="col-md">
+            <h1>Cadastro de Empresa</h1>
+            <hr>
+
+            <form method="POST" action="{% url 'valida_cadastro_equipamento' %}">{% csrf_token %}
+
+                <label>Número do Equipamento</label>
+                <input name="numero_equipamento" class="form-control" type="text" placeholder="Número do Equipamento...">
+                <br>
+                <label>Rodovia</label>
+                <input name="rodovia" class="form-control" type="text" placeholder="Rodovia...">
+                <br>
+                <label>Km</label>
+                <input name="km" class="form-control" type="text" placeholder="Km...">
+                <br>
+                <label>Sentido</label>
+                <input name="Sentido" class="form-control" type="text" placeholder="Sentido...">
+                <br>
+                <label>Empresa</label>
+                <input name="empresa" class="form-control" type="text" placeholder="Empresa...">
+                <br>
+                <label>IP</label>
+                <input name="empresa" class="form-control" type="text" placeholder="IP...">
+                <br>
+                <label>Máscara</label>
+                <input name="mascara" class="form-control" type="text" placeholder="Máscara...">
+                <br>
+                <label>Gateway</label>
+                <input name="gateway" class="form-control" type="text" placeholder="Gateway...">
+                <br>
+                <label>Buffer</label>
+                <input name="buffer" class="form-control" type="text" placeholder="Buffer...">
+                <br>
+                <input class="btn btn-success btn-lg" type="submit" value="Cadastrar">
+                <a href="{% url 'login' %}" class="btn btn-secondary btn-lg">Cancelar</a>
+            </form>
+        </div>
+
+
+        <div class="col-md-3">
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+{% endblock %}
+
+{% include "footer.html" %}
