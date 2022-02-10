@@ -8,7 +8,7 @@
     <br>
     {% if status == '0' %}
         <div class="alert alert-success" role="alert">
-            Cadastro realizado com sucesso.
+            erro teste teste
         </div>
     {% endif%}
 
@@ -20,7 +20,7 @@
 
     {% if status == '2' %}
         <div class="alert alert-danger" role="alert">
-            O nome é um campo obrigatório.
+            Não foi possível salvar.
         </div>
     {% endif%}
 
@@ -48,20 +48,18 @@
                 <label>Sentido</label>
                 <input name="Sentido" class="form-control" type="text" placeholder="Sentido...">
                 <br>
-                <label>Empresa</label>
-                <input name="empresa" class="form-control" type="text" placeholder="Empresa...">
+
+                <label>IP (opcional)</label>
+                <input name="ip" class="form-control" type="text" placeholder="IP...">
                 <br>
-                <label>IP</label>
-                <input name="empresa" class="form-control" type="text" placeholder="IP...">
-                <br>
-                <label>Máscara</label>
+                <label>Máscara (opcional)</label>
                 <input name="mascara" class="form-control" type="text" placeholder="Máscara...">
                 <br>
-                <label>Gateway</label>
+                <label>Gateway (opcional)</label>
                 <input name="gateway" class="form-control" type="text" placeholder="Gateway...">
                 <br>
-                <label>Buffer</label>
-                <input name="buffer" class="form-control" type="text" placeholder="Buffer...">
+                <label>IP Buffer (opcional)</label>
+                <input name="ip_buffer" class="form-control" type="text" placeholder="IP Buffer...">
                 <br>
                 <input class="btn btn-success btn-lg" type="submit" value="Cadastrar">
                 <a href="{% url 'login' %}" class="btn btn-secondary btn-lg">Cancelar</a>

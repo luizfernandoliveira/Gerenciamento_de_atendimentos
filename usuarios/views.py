@@ -38,7 +38,7 @@ def valida_cadastro(request):
 
         return redirect('/auth/cadastro/?status=0')
 
-    except(Exception):
+    except Exception:
         return redirect('/auth/cadastro/?status=4')
 
 
