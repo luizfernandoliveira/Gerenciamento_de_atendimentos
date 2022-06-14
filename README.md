@@ -10,3 +10,5 @@ Para conferir qualidade do código:
 ```console
 flake8
 ```
+
+Software
