@@ -54,9 +54,11 @@ def valida_login(request):
         return redirect('/auth/login/?status=1')
     elif len(usuario) > 0:
         request.session['usuario'] = usuario[0].id
-        return redirect("/home/")   # Corrigir redirecionar para um painel do usuário
+        return redirect("/dashboard/")   # Corrigir redirecionar para um painel do usuário
 
 
 def sair(request):
     request.session.flush()
     return redirect('/auth/login')
+
+

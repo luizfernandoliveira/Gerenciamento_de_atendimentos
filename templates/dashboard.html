@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+
+</head>
+<body>
+
+</body>
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    {% block 'head' %} {% endblock %}
+    <title>{% block 'titulo' %} {% endblock %}</title>
+  </head>
+  <body style="background-color:#E3F6CE">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Gerenciamento de Atendimentos</a>
+        <a class="navbar-brand" href="#">|</a>
+        <a class="navbar-brand" href="#">Bem vindo, USER</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0 " method="POST" action="{% url 'sair' %}"> {% csrf_token %}
+              <button class="btn btn-primary my-2 my-sm-0" type="submit">Sair</button>
+            </form>
+          </div>
+    </nav>
+
+<br>
+
+<h2 align="center" style="color:DarkSlateGray">Pendências</h2>
+<br>
+<h5  align="center" style="color:red">Inserir lista de pendências de atendimento do prazo mais curto para o maior.</h5>
+
+  {% include "footer.html" %}
