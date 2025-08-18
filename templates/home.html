@@ -32,6 +32,14 @@
 <h2 align="center" style="color:DarkSlateGray">Pendências</h2>
 <br>
 <h5  align="center" style="color:red">Inserir lista de pendências de atendimento do prazo mais curto para o maior.</h5>
+<br>
+<form class="form-inline my-2 my-lg-0 " method="POST" action="{% url 'cadastro_empresa' %}"> {% csrf_token %}
+    <button class="btn btn-primary my-2 my-sm-2" type="submit">      Cadastro de Empresa     </button>
+</form>
+<form class="form-inline my-2 my-lg-0 " method="POST" action="{% url 'cadastro_equipamento' %}"> {% csrf_token %}
+    <button class="btn btn-primary my-2 my-sm-2" type="submit">Cadastro de Equipamentos</button>
+</form>
+
 
   {% include "footer.html" %}
 

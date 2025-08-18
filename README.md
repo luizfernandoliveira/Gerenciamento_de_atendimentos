@@ -11,4 +11,4 @@ Para conferir qualidade do código:
 flake8
 ```
 
-Software
+Softwarey
