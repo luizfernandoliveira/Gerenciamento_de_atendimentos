@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login # Adicione estas importações
 from .models import Usuario
 from hashlib import sha256
 
@@ -46,19 +47,15 @@ def valida_login(request):
     email = request.POST.get('email')
     senha = request.POST.get('senha')
 
-    senha = sha256(senha.encode()).hexdigest()
+    usuario = authenticate(request, username=email, password=senha)
 
-    usuario = Usuario.objects.filter(email=email).filter(senha=senha)
-
-    if len(usuario) == 0:
+    if usuario is not None:
+        login(request, usuario)
+        return redirect("/dashboard/")
+    else:
         return redirect('/auth/login/?status=1')
-    elif len(usuario) > 0:
-        request.session['usuario'] = usuario[0].id
-        return redirect("/dashboard/")   # Corrigir redirecionar para um painel do usuário
 
 
 def sair(request):
     request.session.flush()
     return redirect('/auth/login')
-
-

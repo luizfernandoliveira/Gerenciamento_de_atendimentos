@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from atendimentos.models import Atendimento
 
 def home(request):
     status = request.GET.get('status')
@@ -7,4 +7,5 @@ def home(request):
 
 
 def dashboard(request):
-    return render(request, 'dashboard.html')
+    atendimentos = Atendimento.objects.all()
+    return render(request, 'dashboard.html', {'atendimentos': atendimentos})
