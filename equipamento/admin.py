@@ -3,5 +3,5 @@ from .models import Equipamento
 
 
 @admin.register(Equipamento)
-class UsuarioAdmin(admin.ModelAdmin):
+class EquipamentoAdmin(admin.ModelAdmin):
     readonly_fields = ('numero_equipamento', 'rodovia')

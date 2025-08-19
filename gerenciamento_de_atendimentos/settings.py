@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'empresa',
     'usuarios',
     'equipamento',
+    'atendimentos',
 ]
 
 MIDDLEWARE = [
