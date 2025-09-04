@@ -118,13 +118,8 @@
             "version": "==3.4.3"
         },
         "django": {
-            "hashes": [
-                "sha256:0745b25681b129a77aae3d4f6549b62d3913d74407831abaa0d9021a03954bae",
-                "sha256:2b2ada0ee8a5ff743a40e2b9820d1f8e24c11bac9ae6469cd548f0057ea6ddcd"
-            ],
-            "index": "pypi",
-            "markers": "python_version >= '3.10'",
-            "version": "==5.2.5"
+            "hashes": [],
+            "version": "==5.2.6"
         },
         "flake8": {
             "hashes": [
