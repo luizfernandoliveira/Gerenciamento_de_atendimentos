@@ -25,12 +25,8 @@
             "version": "==3.9.1"
         },
         "certifi": {
-            "hashes": [
-                "sha256:e564105f78ded564e3ae7c923924435e1daa7463faeab5bb932bc53ffae63407",
-                "sha256:f6c12493cfb1b06ba2ff328595af9350c65d6644968e5d3a2ffd78699af217a5"
-            ],
-            "markers": "python_version >= '3.7'",
-            "version": "==2025.8.3"
+            "hashes": [],
+            "version": "==2025.11.12"
         },
         "charset-normalizer": {
             "hashes": [
